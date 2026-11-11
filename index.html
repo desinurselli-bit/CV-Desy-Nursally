@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Mahasiswa - Curriculum Vitae</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         HALAMAN LOGIN MAHASISWA
+    ================================== -->
+
+    <div class="login-container" id="loginPage">
+
+        <div class="login-header">
+            <h1>Login Mahasiswa</h1>
+
+            <p>
+                Masukkan data akun mahasiswa yang sesuai
+                untuk membuka halaman Curriculum Vitae.
+            </p>
+        </div>
+
+        <div class="form-area">
+
+            <form id="loginForm">
+
+                <!-- NIM -->
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+
+                    <input
+                        type="text"
+                        id="nim"
+                        placeholder="Masukkan NIM"
+                        required
+                    >
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Masukkan password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            onclick="lihatPassword()"
+                            aria-label="Lihat password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- JENJANG PENDIDIKAN -->
+                <div class="form-group">
+                    <label for="jenjang">
+                        Jenjang Pendidikan
+                    </label>
+
+                    <select id="jenjang" required>
+
+                        <option value="">
+                            Pilih jenjang pendidikan
+                        </option>
+
+                        <option value="SMA/SMK">
+                            SMA/SMK
+                        </option>
+
+                        <option value="D3">
+                            D3
+                        </option>
+
+                        <option value="D4/S1 - Sistem Informasi Bisnis">
+                            D4/S1 - Sistem Informasi Bisnis
+                        </option>
+
+                        <option value="S1 - Lainnya">
+                            S1 - Lainnya
+                        </option>
+
+                        <option value="S2">
+                            S2
+                        </option>
+
+                    </select>
+                </div>
+
+                <!-- TOMBOL LOGIN -->
+                <button type="submit" class="login-button">
+                    LOGIN
+                </button>
+
+            </form>
+
+            <!-- INFORMASI LOGIN -->
+            <div class="info-login">
+
+                <h3>Informasi Login</h3>
+
+                <p>NIM : 2024140006</p>
+
+                <p>Password : desy123</p>
+
+                <p>Jenjang : D4/S1 - Sistem Informasi Bisnis</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         HALAMAN CURRICULUM VITAE
+    ================================== -->
+
+    <div class="cv-container" id="cvPage">
+
+        <div class="cv-content">
+
+            <!-- HEADER PROFIL -->
+            <div class="cv-profile">
+
+                <img
+                    src="./foto-profil.jpg"
+                    alt="Foto Profil Desy"
+                >
+
+                <div class="profile-info">
+
+                    <h3>DAFTAR RIWAYAT HIDUP</h3>
+
+                    <h1>DESY NURSALLY GURNING</h1>
+
+                    <h2>MAHASISWA SISTEM INFORMASI BISNIS</h2>
+
+                </div>
+
+            </div>
+
+            <hr class="garis">
+
+
+            <!-- TENTANG SAYA -->
+            <section class="cv-section full-width">
+
+                <h3>TENTANG SAYA</h3>
+
+                <p>
+                    Saya adalah mahasiswa Program Studi Sistem
+                    Informasi yang memiliki minat dalam bidang
+                    teknologi informasi, khususnya pembuatan dan
+                    pengembangan website. Saya senang mempelajari
+                    hal baru, mengembangkan kemampuan diri, serta
+                    berusaha menjadi pribadi yang kreatif,
+                    disiplin, dan bertanggung jawab.
+                </p>
+
+            </section>
+
+
+            <!-- BAGIAN DUA KOLOM -->
+            <div class="cv-columns">
+
+
+                <!-- KOLOM KIRI -->
+                <div class="left-column">
+
+                    <!-- BIODATA -->
+                    <section class="cv-section">
+
+                        <h3>BIODATA DIRI</h3>
+
+                        <p>
+                            <b>Nama:</b>
+                            Desy Nursally Gurning
+                        </p>
+
+                        <p>
+                            <b>Tempat, Tanggal Lahir:</b>
+                            Pardomuan, 12 Maret 2006
+                        </p>
+
+                        <p>
+                            <b>Alamat:</b>
+                            AMIK Universal Medan (Kost Pagar Hitam)
+                        </p>
+
+                        <p>
+                            <b>Hobi:</b>
+                            Membaca dan mendengarkan musik
+                        </p>
+
+                        <p>
+                            <b>NIM:</b>
+                            <span id="hasilNim"></span>
+                        </p>
+
+                        <p>
+                            <b>Jenjang:</b>
+                            <span id="hasilJenjang"></span>
+                        </p>
+
+                    </section>
+
+
+                    <!-- PENDIDIKAN -->
+                    <section class="cv-section">
+
+                        <h3>PENDIDIKAN</h3>
+
+                        <p><b>Perguruan Tinggi</b></p>
+
+                        <ul>
+                            <li>AMIK Universal Medan</li>
+                            <li>Program Studi Sistem Informasi Bisnis</li>
+                            <li>Jenjang D4/S1</li>
+                        </ul>
+
+                    </section>
+
+
+                    <!-- HOBI -->
+                    <section class="cv-section">
+
+                        <h3>HOBI</h3>
+
+                        <ul>
+                            <li>Bernyanyi</li>
+                            <li>Mendengarkan musik</li>
+                            <li>Membaca</li>
+                            <li>Menonton film/series</li>
+                        </ul>
+
+                    </section>
+
+                </div>
+
+
+                <!-- KOLOM KANAN -->
+                <div class="right-column">
+
+                    <!-- KEMAMPUAN -->
+                    <section class="cv-section">
+
+                        <h3>KEMAMPUAN DAN MINAT</h3>
+
+                        <ul>
+                            <li>
+                                Membuat website menggunakan HTML dan CSS.
+                            </li>
+
+                            <li>
+                                Mempelajari bahasa pemrograman.
+                            </li>
+
+                            <li>
+                                Mengembangkan desain website.
+                            </li>
+
+                            <li>
+                                Mempelajari teknologi informasi.
+                            </li>
+
+                            <li>
+                                Mengembangkan kemampuan diri.
+                            </li>
+                        </ul>
+
+                    </section>
+
+
+                    <!-- KEPRIBADIAN -->
+                    <section class="cv-section">
+
+                        <h3>KEPRIBADIAN</h3>
+
+                        <ul>
+                            <li>Bertanggung jawab.</li>
+
+                            <li>Mau belajar hal baru.</li>
+
+                            <li>Disiplin dan berusaha mandiri.</li>
+
+                            <li>Memiliki semangat untuk berkembang.</li>
+                        </ul>
+
+                    </section>
+
+
+                    <!-- MOTIVASI -->
+                    <section class="cv-section">
+
+                        <h3>MOTIVASI HIDUP</h3>
+
+                        <p>
+                            "Jangan pernah menyerah dalam mengejar
+                            impian. Setiap proses membutuhkan
+                            kesabaran, doa, kerja keras, dan
+                            keberanian untuk mencoba. Masa depan
+                            yang baik dimulai dari usaha yang
+                            dilakukan hari ini."
+                        </p>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOMBOL LOGOUT -->
+            <button
+                type="button"
+                class="logout-button"
+                onclick="logout()"
+            >
+                LOGOUT
+            </button>
+
+            <p class="footer-cv">
+                CURRICULUM VITAE - DESY NURSALLY GURNING
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         JAVASCRIPT LOGIN DAN LOGOUT
+    ================================== -->
+
+    <script>
+
+        // PROSES LOGIN
+
+        document.getElementById("loginForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let nim = document.getElementById("nim").value.trim();
+
+            let password =
+                document.getElementById("password").value;
+
+            let jenjang =
+                document.getElementById("jenjang").value;
+
+
+            // VALIDASI DATA LOGIN
+
+            if (
+                nim === "2024140006" &&
+                password === "desy123" &&
+                jenjang === "D4/S1 - Sistem Informasi Bisnis"
+            ) {
+
+                // MENYEMBUNYIKAN HALAMAN LOGIN
+                document.getElementById("loginPage")
+                .style.display = "none";
+
+
+                // MENAMPILKAN HALAMAN CV
+                document.getElementById("cvPage")
+                .style.display = "block";
+
+
+                // MENAMPILKAN DATA MAHASISWA
+                document.getElementById("hasilNim")
+                .innerText = nim;
+
+                document.getElementById("hasilJenjang")
+                .innerText = jenjang;
+
+
+                // KEMBALI KE BAGIAN ATAS HALAMAN
+                window.scrollTo(0, 0);
+
+            } else {
+
+                alert(
+                    "Login gagal! Periksa kembali NIM, password, dan jenjang pendidikan Anda."
+                );
+
+            }
+
+        });
+
+
+        // FITUR MELIHAT PASSWORD
+
+        function lihatPassword() {
+
+            let password =
+                document.getElementById("password");
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+            } else {
+
+                password.type = "password";
+
+            }
+
+        }
+
+
+        // PROSES LOGOUT
+
+        function logout() {
+
+            document.getElementById("cvPage")
+            .style.display = "none";
+
+            document.getElementById("loginPage")
+            .style.display = "block";
+
+            document.getElementById("loginForm")
+            .reset();
+
+            window.scrollTo(0, 0);
+
+        }
+
+    </script>
+
+</body>
+</html>

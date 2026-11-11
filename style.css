@@ -1,0 +1,446 @@
+
+/* =====================================
+   PENGATURAN DASAR WEBSITE
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #ff9aaf,
+        #f8c8dc,
+        #e8a6d8
+    );
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: #333;
+}
+
+
+/* =====================================
+   HALAMAN LOGIN
+===================================== */
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(150, 60, 100, 0.2);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    color: #d65b91;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.login-header p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   FORM LOGIN
+===================================== */
+
+.form-area {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #63374a;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e7b3c9;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: #fffafa;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #ec6f9e;
+    box-shadow: 0 0 5px rgba(236, 111, 158, 0.3);
+}
+
+
+/* =====================================
+   PASSWORD
+===================================== */
+
+.password-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-box input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.show-password {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+
+/* =====================================
+   TOMBOL LOGIN
+===================================== */
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(
+        135deg,
+        #ec6f9e,
+        #d66ba0
+    );
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background: #bd4778;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   INFORMASI LOGIN
+===================================== */
+
+.info-login {
+    margin-top: 25px;
+    padding: 18px;
+    background: #fff0f5;
+    border-left: 4px solid #ec6f9e;
+    border-radius: 8px;
+}
+
+.info-login h3 {
+    color: #c94f82;
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.info-login p {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+
+/* =====================================
+   HALAMAN CURRICULUM VITAE
+===================================== */
+
+.cv-container {
+    display: none;
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto;
+    background: #ffffff;
+    border: 2px solid #efa5c2;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(150, 60, 100, 0.2);
+}
+
+.cv-content {
+    padding: 30px;
+    background: #fffafa;
+}
+
+
+/* =====================================
+   HEADER PROFIL CV
+===================================== */
+
+.cv-profile {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.cv-profile img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    border: 3px solid #f2a6c2;
+    background: #fce4ec;
+    display: block;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-info h3 {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.profile-info h1 {
+    font-size: 27px;
+    color: #c94f82;
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+.profile-info h2 {
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* =====================================
+   GARIS PEMBATAS
+===================================== */
+
+.garis {
+    border: none;
+    height: 3px;
+    background: #e7a0bd;
+    margin: 20px 0;
+}
+
+
+/* =====================================
+   BAGIAN CV
+===================================== */
+
+.cv-section {
+    margin-bottom: 22px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.cv-section h3 {
+    display: inline-block;
+    background: #f4c6d8;
+    color: #63374a;
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.cv-section p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.cv-section ul {
+    padding-left: 20px;
+}
+
+.cv-section ul li {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.cv-section b {
+    color: #63374a;
+}
+
+
+/* =====================================
+   DUA KOLOM CV
+===================================== */
+
+.cv-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.left-column,
+.right-column {
+    min-width: 0;
+}
+
+
+/* =====================================
+   TOMBOL LOGOUT
+===================================== */
+
+.logout-button {
+    display: block;
+    width: 150px;
+    margin: 25px auto 5px;
+    padding: 12px;
+    background: #dc6d99;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-button:hover {
+    background: #bd4778;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   FOOTER CV
+===================================== */
+
+.footer-cv {
+    text-align: center;
+    color: #c47798;
+    font-size: 11px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+
+/* =====================================
+   RESPONSIVE TABLET DAN HP
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    .login-container {
+        margin: 20px auto;
+        padding: 25px 20px;
+    }
+
+    .login-header h1 {
+        font-size: 24px;
+    }
+
+    .cv-container {
+        margin: 10px auto;
+    }
+
+    .cv-content {
+        padding: 18px;
+    }
+
+    .cv-profile {
+        gap: 12px;
+    }
+
+    .cv-profile img {
+        width: 105px;
+        height: 125px;
+    }
+
+    .profile-info h3 {
+        font-size: 12px;
+    }
+
+    .profile-info h1 {
+        font-size: 19px;
+    }
+
+    .profile-info h2 {
+        font-size: 11px;
+    }
+
+    .cv-columns {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .cv-section h3 {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .cv-section p,
+    .cv-section ul li {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =====================================
+   HP DENGAN LAYAR KECIL
+===================================== */
+
+@media screen and (max-width: 380px) {
+
+    .cv-profile img {
+        width: 85px;
+        height: 110px;
+    }
+
+    .profile-info h1 {
+        font-size: 16px;
+    }
+
+    .profile-info h3 {
+        font-size: 10px;
+    }
+
+    .profile-info h2 {
+        font-size: 10px;
+    }
+
+    .cv-columns {
+        grid-template-columns: 1fr;
+    }
+
+}
